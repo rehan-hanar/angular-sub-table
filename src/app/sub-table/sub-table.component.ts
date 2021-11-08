@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SubTableComponent implements OnInit {
   @Input() data: any;
   @Input() columnsToDisplay: Array<any>;
+  @Input() headersForColumns: any;
   // columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
 
   constructor() {}

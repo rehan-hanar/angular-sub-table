@@ -11,7 +11,7 @@
     *ngFor="let column of columnsToDisplay"
   >
     <mat-header-cell *matHeaderCellDef>
-      {{ headersForColumns[column] }}
+      {{ column }}
     </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element[column] }} </mat-cell>
   </ng-container>
@@ -27,6 +27,7 @@
           style="width:100%; padding:10px;"
           [columnsToDisplay]="columnsToDisplay"
           [data]="dataSource"
+          [headersForColumns]="headersForColumns"
         ></app-sub-table>
         <!-- <div class="example-element-diagram">
           <div class="example-element-position"> {{element.position}} </div>
